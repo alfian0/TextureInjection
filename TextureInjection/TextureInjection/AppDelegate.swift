@@ -19,16 +19,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         
         #if DEBUG
-            #if os(macOS)
-            let bundleName = "macOSInjection.bundle"
-            #elseif os(tvOS)
-            let bundleName = "tvOSInjection.bundle"
-            #elseif targetEnvironment(simulator)
-            let bundleName = "iOSInjection.bundle"
-            #else
-            let bundleName = "maciOSInjection.bundle"
-            #endif
-            Bundle(path: "/Applications/InjectionIII.app/Contents/Resources/"+bundleName)!.load()
+//            #if os(macOS)
+//            let bundleName = "macOSInjection.bundle"
+//            #elseif os(tvOS)
+//            let bundleName = "tvOSInjection.bundle"
+//            #elseif targetEnvironment(simulator)
+//            let bundleName = "iOSInjection.bundle"
+//            #else
+//            let bundleName = "maciOSInjection.bundle"
+//            #endif
+//            Bundle(path: "/Applications/InjectionIII.app/Contents/Resources/"+bundleName)!.load()
         #endif
         return true
     }

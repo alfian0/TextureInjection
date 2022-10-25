@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		86BEDD845FAA59DD6C7C923E /* Pods_TextureInjection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DFC6B364B862C8FFA61B035 /* Pods_TextureInjection.framework */; };
+		932855732907A1300046AEBD /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 932855722907A1300046AEBD /* opencv2.framework */; };
+		932855752907A1D70046AEBD /* haarcascade_frontalface_default.xml in Resources */ = {isa = PBXBuildFile; fileRef = 932855742907A1D70046AEBD /* haarcascade_frontalface_default.xml */; };
+		932D838C2907975E009DB0EB /* OpenCVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 932D838B2907975E009DB0EB /* OpenCVWrapper.mm */; };
 		9383A37E28040A52000FDFE8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9383A37D28040A52000FDFE8 /* AppDelegate.swift */; };
 		9383A38228040A52000FDFE8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9383A38128040A52000FDFE8 /* ViewController.swift */; };
 		9383A38728040A53000FDFE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9383A38628040A53000FDFE8 /* Assets.xcassets */; };
@@ -34,6 +37,11 @@
 		26DC38DBC8ED841EB9B953F7 /* Pods-TextureInjection.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextureInjection.release.xcconfig"; path = "Target Support Files/Pods-TextureInjection/Pods-TextureInjection.release.xcconfig"; sourceTree = "<group>"; };
 		3CFF82CDD9B31B04655EC7D3 /* Pods-TextureInjection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextureInjection.debug.xcconfig"; path = "Target Support Files/Pods-TextureInjection/Pods-TextureInjection.debug.xcconfig"; sourceTree = "<group>"; };
 		6DFC6B364B862C8FFA61B035 /* Pods_TextureInjection.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TextureInjection.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		932855722907A1300046AEBD /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
+		932855742907A1D70046AEBD /* haarcascade_frontalface_default.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_frontalface_default.xml; sourceTree = "<group>"; };
+		932D83892907975E009DB0EB /* TextureInjection-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TextureInjection-Bridging-Header.h"; sourceTree = "<group>"; };
+		932D838A2907975E009DB0EB /* OpenCVWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenCVWrapper.h; sourceTree = "<group>"; };
+		932D838B2907975E009DB0EB /* OpenCVWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCVWrapper.mm; sourceTree = "<group>"; };
 		9383A37A28040A52000FDFE8 /* TextureInjection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextureInjection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9383A37D28040A52000FDFE8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9383A38128040A52000FDFE8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				932855732907A1300046AEBD /* opencv2.framework in Frameworks */,
 				9383A3CD28040F42000FDFE8 /* TTKit.framework in Frameworks */,
 				86BEDD845FAA59DD6C7C923E /* Pods_TextureInjection.framework in Frameworks */,
 			);
@@ -87,11 +96,16 @@
 		9383A37C28040A52000FDFE8 /* TextureInjection */ = {
 			isa = PBXGroup;
 			children = (
+				932855742907A1D70046AEBD /* haarcascade_frontalface_default.xml */,
+				932855722907A1300046AEBD /* opencv2.framework */,
 				9383A37D28040A52000FDFE8 /* AppDelegate.swift */,
 				9383A38128040A52000FDFE8 /* ViewController.swift */,
 				9383A38628040A53000FDFE8 /* Assets.xcassets */,
 				9383A38828040A53000FDFE8 /* LaunchScreen.storyboard */,
 				9383A38B28040A53000FDFE8 /* Info.plist */,
+				932D838A2907975E009DB0EB /* OpenCVWrapper.h */,
+				932D838B2907975E009DB0EB /* OpenCVWrapper.mm */,
+				932D83892907975E009DB0EB /* TextureInjection-Bridging-Header.h */,
 			);
 			path = TextureInjection;
 			sourceTree = "<group>";
@@ -140,6 +154,7 @@
 				TargetAttributes = {
 					9383A37928040A52000FDFE8 = {
 						CreatedOnToolsVersion = 13.1;
+						LastSwiftMigration = 1340;
 					};
 				};
 			};
@@ -167,6 +182,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9383A38A28040A53000FDFE8 /* LaunchScreen.storyboard in Resources */,
+				932855752907A1D70046AEBD /* haarcascade_frontalface_default.xml in Resources */,
 				9383A38728040A53000FDFE8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -222,6 +238,7 @@
 			files = (
 				9383A38228040A52000FDFE8 /* ViewController.swift in Sources */,
 				9383A37E28040A52000FDFE8 /* AppDelegate.swift in Sources */,
+				932D838C2907975E009DB0EB /* OpenCVWrapper.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,9 +378,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9GE8EQEDQB;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TextureInjection",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TextureInjection/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -385,6 +408,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = id.alfian.TextureInjection;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "TextureInjection/TextureInjection-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -396,9 +421,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9GE8EQEDQB;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TextureInjection",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TextureInjection/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -420,6 +451,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = id.alfian.TextureInjection;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "TextureInjection/TextureInjection-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
